@@ -1,5 +1,5 @@
 <template>
-  <div class="consultar">
+  <!-- <div class="consultar">
     <h3>Consultar el estudiante por la cedula</h3>
     <ConsultaEstudiante/>
   </div>
@@ -14,22 +14,21 @@
   <div class="eliminar">
     <h3>Eliminar estudiante</h3>
     <EliminarEstudiante/>
-  </div>
+  </div> -->
+  <NavBar/>
+<router-view/> 
 </template>
 
 <script>
-import ConsultaEstudiante from './modules/estudiante/pages/ConsultaEstudiante.vue'
-import GuardarEstudiante from './modules/estudiante/pages/GuardarEstudiante.vue'
-import ActualizarEstudiante from './modules/estudiante/pages/ActualizarEstudiante.vue';
-import EliminarEstudiante from './modules/estudiante/pages/EliminarEstudiante.vue';
-
+import NavBar from './modules/estudiante/components/NavBar.vue';
 export default {
   name: 'App',
   components: {
-    ConsultaEstudiante,
-    GuardarEstudiante,
-    ActualizarEstudiante, 
-    EliminarEstudiante
+    // ConsultaEstudiante,
+    // GuardarEstudiante,
+    // ActualizarEstudiante, 
+    // EliminarEstudiante
+    NavBar
   }
 }
 </script>
@@ -45,7 +44,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.guardar, .consultar, .actualizar, .eliminar{
+/* .guardar, .consultar, .actualizar, .eliminar{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,5 +54,5 @@ export default {
   padding-bottom: 15px;
   border: solid 3px black;
   width: 50%;
-}
+} */
 </style>

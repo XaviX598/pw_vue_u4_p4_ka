@@ -64,7 +64,7 @@ export const eliminarEstudianteFachada = (id) => {
 };
 
 const eliminarEstudiante = (id) => {
-  const data = axios.get(`http://localhost:8080/API/V1.0/Matricula/estudiantes/${cedula}`).then((r) => r.data); //axios ya tiene implicito await asi que no hace falta ponerlo
+  // const data = axios.get(`http://localhost:8080/API/V1.0/Matricula/estudiantes/${cedula}`).then((r) => r.data); //axios ya tiene implicito await asi que no hace falta ponerlo
   
   axios
     .delete(`http://localhost:8080/API/V1.0/Matricula/estudiantes/${id}`)
