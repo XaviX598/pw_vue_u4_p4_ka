@@ -19,11 +19,11 @@
         </div>
         <div class="fecha">
             <label for="">Fecha de nacimiento</label>
-            <input v-model="nombre" type="text" />
+            <input v-model="fechaNacimiento" type="text" />
         </div>
         <div class="provincia">
             <label for="">Provincia</label>
-            <input v-model="apellido" type="text" />
+            <input v-model="provincia" type="text" />
         </div>
     </div>
     <button @click="actualizarEstudiante">Actualizar</button>
@@ -99,4 +99,5 @@ button:hover {
     background-color: rgb(245, 198, 198);
     color: black;
     border: black solid 2px;
-}</style>
+}
+</style>

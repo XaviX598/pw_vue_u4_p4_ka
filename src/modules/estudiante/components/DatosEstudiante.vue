@@ -2,7 +2,7 @@
     <div class="consultar">
         <h3>Ingrese los datos del estudiante que desea CONSULTAR</h3>
         <div class="ingresar">
-            <input class="inputCedula" v-model="cedula" type="text"  placeholder="Ingrese el numero de cedula..."/>
+            <input class="inputCedula" v-model="cedula" type="text" placeholder="Ingrese el numero de cedula..." />
             <button @click="consultarEstudiante">Consultar</button>
         </div>
         <div class="nombre">
@@ -15,11 +15,11 @@
         </div>
         <div class="fecha">
             <label for="">Fecha de nacimiento: </label>
-            <input v-model="nombre" type="text" />
+            <input v-model="fechaNacimiento" type="text" />
         </div>
         <div class="provincia">
             <label for="">Provincia: </label>
-            <input v-model="apellido" type="text" />
+            <input v-model="provincia" type="text" />
         </div>
     </div>
 </template>
@@ -29,7 +29,7 @@ import { obtenerEstudianteFachada } from "../helpers/EstudianteCliente.js" //med
 export default {
     data() {
         return {
-            cedula: null,
+            cedula: this.$route.params.cedula,
             nombre: null,
             apellido: null,
             fechaNacimiento: null,
@@ -38,38 +38,66 @@ export default {
         }
     },
     methods: {
-        async consultarEstudiante() {
-            const data = await obtenerEstudianteFachada(this.cedula);
+        async consultarEstudiante(cedula) {
+            const data = await obtenerEstudianteFachada(cedula);
             this.nombre = data.nombre
             this.apellido = data.apellido
-            this.fechaNacimiento =  data.fechaNacimiento
-            this.provincia =  data.provincia
-            console.log(data)
+            this.fechaNacimiento = data.fechaNacimiento
+            this.provincia = data.provincia
+            // console.log(data)
         }
+    },
+    mounted() {
+        //esto es en la programacion
+        //pathvariable
+        // http://localhost:8081/....../estudiante/{cedula}
+        // http://localhost:8081/....../estudiante/:cedula
+        const { cedula } = this.$route.params;
+        console.log(cedula)
+        this.consultarEstudiante(cedula)
+        //requestParam
+        // http://localhost:8081/....../estudiante?provincia=pichincha&ciudad=quito
+        // http://localhost:8081/#/consultar/1724441041?provincia=pichincha
+        
+        console.log(this.$route)
+        //para obtener un dato
+        const provin= this.$route.query.provincia
+        const { provincia } = this.$route.params;
+        console.log(provincia)
     }
 }
 </script>
 
 <style scoped>
-.consultar{
+.consultar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top:-10px;
+    margin-top: -10px;
     font-size: large;
     font-display: bold;
     padding: 20px 0px;
 }
-.ingresar, .nombre, .apellido, .fecha, .provincia {
+
+.ingresar,
+.nombre,
+.apellido,
+.fecha,
+.provincia {
     display: flex;
     flex-direction: column;
     width: 300px;
 }
-.nombre, .apellido, .fecha, .provincia {
+
+.nombre,
+.apellido,
+.fecha,
+.provincia {
     margin-top: 40px;
 }
-button{
+
+button {
     cursor: pointer;
     margin-top: 20px;
     padding: 20px 0px;
@@ -78,7 +106,8 @@ button{
     color: white;
     border: rgb(245, 198, 198) solid 2px;
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
     margin-top: 20px;
     padding: 20px 0px;
@@ -87,8 +116,8 @@ button:hover{
     color: black;
     border: black solid 2px;
 }
-.inputCedula{
+
+.inputCedula {
     font-size: large;
     /* width: 388px; */
-}
-</style>
+}</style>

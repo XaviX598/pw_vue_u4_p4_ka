@@ -39,6 +39,8 @@ const ingresarEstudiante = (bodyEstudiante) => {
       bodyEstudiante
     )
     .then((r) => r.data); //el segundo argumento es la data que es el body
+
+  console.log("usuario ingresado");
 };
 
 //------------------------- ACTUALIZAR -------------------------------
@@ -59,13 +61,12 @@ const actualizarEstudiante = (bodyEstudiante, id) => {
 //------------------------- ELIMINAR -------------------------------
 
 export const eliminarEstudianteFachada = (id) => {
-  
   eliminarEstudiante(id);
 };
 
 const eliminarEstudiante = (id) => {
   // const data = axios.get(`http://localhost:8080/API/V1.0/Matricula/estudiantes/${cedula}`).then((r) => r.data); //axios ya tiene implicito await asi que no hace falta ponerlo
-  
+
   axios
     .delete(`http://localhost:8080/API/V1.0/Matricula/estudiantes/${id}`)
     .then((r) => r.data);

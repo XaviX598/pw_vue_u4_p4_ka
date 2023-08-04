@@ -2,7 +2,7 @@ import {createRouter, createWebHashHistory} from 'vue-router'
 const routes = [
     {path: '/',  
     component: () => import('../modules/estudiante/pages/BienvenidaPage.vue')}, 
-    {path: '/consultar', 
+    {path: '/consultar/:cedula', //para indicar que vamos a mandar un pathvariable 
     component: () => import('../modules/estudiante/pages/ConsultaEstudiante.vue')}, 
     {path: '/ingresar', 
     component: () => import('../modules/estudiante/pages/GuardarEstudiante.vue')}, 

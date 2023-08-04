@@ -34,5 +34,7 @@ a:hover{
 .router{
     margin-top: -30px;
     margin-bottom: 20px;
+    background: rgb(94, 167, 178);
+    padding: 10px;
 }
 </style>

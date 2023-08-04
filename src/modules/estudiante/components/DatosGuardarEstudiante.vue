@@ -15,11 +15,11 @@
         </div>
         <div class="fecha">
             <label for="">Fecha de nacimiento</label>
-            <input v-model="nombre" type="text" />
+            <input v-model="fechaNacimiento" type="text" />
         </div>
         <div class="provincia">
             <label for="">Provincia</label>
-            <input v-model="apellido" type="text" />
+            <input v-model="provincia" type="text" />
         </div>
     </div>
     <button @click="guardarEstudiante">Guardar</button>
@@ -55,22 +55,27 @@ export default {
 </script>
 
 <style scoped>
-.ingresar{
+.ingresar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: large;
-    font-display: bold; 
-}
-.cedula, .nombre, .apellido, .fecha, .provincia{
-display: flex;
-flex-direction: column;
-width: 300px;
-margin-top: 20px;
+    font-display: bold;
 }
 
-button{
+.cedula,
+.nombre,
+.apellido,
+.fecha,
+.provincia {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 20px;
+}
+
+button {
     cursor: pointer;
     margin-top: 20px;
     padding: 20px 30px;
@@ -79,7 +84,8 @@ button{
     color: white;
     border: rgb(245, 198, 198) solid 2px;
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
     margin-top: 20px;
     padding: 20px 30px;
@@ -87,5 +93,4 @@ button:hover{
     background-color: rgb(245, 198, 198);
     color: black;
     border: black solid 2px;
-}
-</style>
+}</style>
