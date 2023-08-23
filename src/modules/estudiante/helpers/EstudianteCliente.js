@@ -20,7 +20,7 @@ const obtenerEstudianteAPI = async (cedula) => {
 const obtenerEstudianteAPIAxios = (cedula) => {
   //en el config vamos a enviar todos los datos de cabecera
   const headers={
-    "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJYYXZpZXIiLCJpYXQiOjE2OTI3NTA5NDcsImV4cCI6MTY5Mjc1MTg0N30.l8b4QRQGL6wBX1WQKzTx-KkchoMrJjCbTkXbnXa5HTG-4Pv7pTZ4u3zGGbissOtqrB87QBL63y_topvnA2YxGg",
+    "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJYYXZpWDU5OCIsImlhdCI6MTY5MjgyMDIzNiwiZXhwIjoxNjkyODIxNDM2fQ.qyPv-2f3k9BgaJhXHLS6ZxtKVeBJ86In_XDu9CPyHSr_CrqEV_Umh3bZV_u9-NsSyPUcQo6G-ShQP--6My4Cyw",
     "Mensaje": "Valor1"
   }
   console.log("Axios 2");
@@ -39,7 +39,7 @@ export const ingresarEstudianteFachada = (bodyEstudiante) => {
 
 const ingresarEstudiante = (bodyEstudiante) => {
   const headers={
-    "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJYYXZpZXIiLCJpYXQiOjE2OTI3NTAyMTgsImV4cCI6MTY5Mjc2MDIxOH0.1qqqzlGbQuJWaezC669G-HJtBBeSO6OUvdcZF4s8hgEZCyKdmvqRbObbvWU0JPwwBBh1Li_i6czJsoRdgya4Wg",
+    "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJYYXZpWDU5OCIsImlhdCI6MTY5MjgyMDIzNiwiZXhwIjoxNjkyODIxNDM2fQ.qyPv-2f3k9BgaJhXHLS6ZxtKVeBJ86In_XDu9CPyHSr_CrqEV_Umh3bZV_u9-NsSyPUcQo6G-ShQP--6My4Cyw",
     "Mensaje": "Valor1"
   }
   axios

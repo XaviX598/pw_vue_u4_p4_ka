@@ -26,7 +26,7 @@
             <input v-model="provincia" type="text" />
         </div>
     </div>
-    <button @click="actualizarEstudiante">Actualizar</button>
+    <button class="btn btn-link" @click="actualizarEstudiante">Actualizar</button>
 </template>
 
 <script>
@@ -81,7 +81,7 @@ export default {
     margin-top: 20px;
 }
 
-button {
+/* button {
     cursor: pointer;
     margin-top: 20px;
     padding: 20px 30px;
@@ -99,5 +99,5 @@ button:hover {
     background-color: rgb(245, 198, 198);
     color: black;
     border: black solid 2px;
-}
+} */
 </style>
